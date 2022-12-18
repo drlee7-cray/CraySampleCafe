@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/title" />
+
+    <ListView
+        android:id="@+id/lv_menulist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/lv_orderlist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="10dp"
+        android:scrollbarThumbVertical="@color/scrollbarcolor"
+        />
+
+    <ListView
+        android:id="@+id/lv_orderlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F6F9D7"
+        app:layout_constraintHeight_max="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/lv_ordersum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="10dp"
+        android:scrollbarThumbVertical="@color/scrollbarcolor"
+        />
+
+    <LinearLayout
+        android:id="@+id/lv_ordersum"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#C9E1F2"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/jua_regular"
+            android:text="합계 : 0원"
+            android:textAlignment="textEnd"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

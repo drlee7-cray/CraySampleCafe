@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_order_profile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_coffee_24" />
+
+    <TextView
+        android:id="@+id/tv_order_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="선택메뉴1 x 2개"
+        android:textColor="#304FFE"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_order_profile"
+        app:layout_constraintTop_toTopOf="@+id/iv_order_profile" />
+
+    <TextView
+        android:id="@+id/tv_order_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="￦2,000"
+        android:textColor="#304FFE"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_order_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_name" />
+
+    <ImageView
+        android:id="@+id/btn_order_up"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_circle_up_24" />
+
+    <ImageView
+        android:id="@+id/btn_order_down"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_circle_down_24" />
+
+    <ImageView
+        android:id="@+id/btn_order_delete"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_delete_sweep_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
