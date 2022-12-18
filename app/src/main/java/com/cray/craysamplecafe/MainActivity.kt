@@ -3,6 +3,7 @@ package com.cray.craysamplecafe
 import android.app.ActionBar.LayoutParams
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.widget.Adapter
 import android.widget.AdapterView
 import android.widget.ListView
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         menuClass(
             10002,
             R.id.iv_profile,
-            "카레라떼",
+            "카페라떼",
             1500
         ),
         menuClass(
@@ -81,6 +82,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
+        outState.putSerializable("orderList", orderList)
+    }
+
     // 주문 추가
     public fun add_order(menuCode: Int) {
 
@@ -114,4 +120,6 @@ class MainActivity : AppCompatActivity() {
         tv_total.text = "합계 : " + NumberFormat.getCurrencyInstance(Locale.KOREA).format(totalPrice) + "원"
 
     }
+
+
 }
