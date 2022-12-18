@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
             {
                 // 개수만 증가
                 orderOne.count ++;
-
+                orderItemAdapter.notifyDataSetChanged()
                 refresh_total()
                 return;
             }
